@@ -11,6 +11,10 @@
     <name>Metric Source</name>
     <url>http://maven.apache.org</url>
 
+    <properties>
+        <mainClass>org.master.alma.metricsource.Main</mainClass>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -39,8 +43,41 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>org.master.alma.metricsource.Main</mainClass>
+                    <mainClass>${mainClass}</mainClass>
+                    <arguments>
+                        <argument>foo</argument>
+                        <argument>bar</argument>
+                    </arguments>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.3.1</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>${mainClass}</mainClass>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.3</version>
+                <configuration>
+                    <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
 
