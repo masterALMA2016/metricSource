@@ -15,15 +15,12 @@ import java.util.List;
  */
 public class Main {
 
-    String a;
-    int b;
-
     public static void main(String[] args) {
 
 
         try {
             Launcher spoon = new Launcher();
-            spoon.addInputResource(new FileSystemFolder(new File("/Users/Maxime/Documents/Fac/Master ALMA/S1/Vérification et Tests/metricSource/src/main/java/org/master/alma/metricsource/")));
+            spoon.addInputResource(new FileSystemFolder(new File("./src/main/java/org/master/alma/metricsource/")));
             spoon.run();
             Factory factory = spoon.getFactory();
             for(CtPackage p : factory.Package().getAll()) {
