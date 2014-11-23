@@ -4,24 +4,28 @@ import spoon.reflect.declaration.CtSimpleType;
 import spoon.reflect.factory.Factory;
 
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.DoubleSummaryStatistics;
+import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by Maxime on 14/11/14.
  */
-public class MethodMetric implements Metric{
-
-    private Factory factory;
+public class MethodMetric extends Metric<Double>{
 
     public MethodMetric(Factory factory) {
-        this.factory = factory;
+        super(factory);
     }
 
-
     @Override
-    public void execut() {
+    public Double execute() {
+        int nb = 0;
+        Double nbMethod = 0.0;
         for(CtSimpleType s : factory.Class().getAll()) {
-            int a = s.getActualClass().getMethods().length;
-            System.out.println(a);
+            nbMethod += s.getActualClass().getDeclaredMethods().length;
+            nb++;
         }
+        return nbMethod/nb;
     }
 }

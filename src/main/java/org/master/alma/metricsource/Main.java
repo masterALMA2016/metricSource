@@ -35,7 +35,7 @@ public class Main {
 
             }
             MethodMetric m = new MethodMetric(factory);
-            m.execut();
+            System.out.println(m.execute());
         } catch (Exception e) {
             e.printStackTrace();
         }
