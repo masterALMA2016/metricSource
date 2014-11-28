@@ -36,8 +36,10 @@ public class Main {
                 }
 
             }
-            AverageMethodByClassMetric m = new AverageMethodByClassMetric(factory);
+            Metric m = new AverageMethodByClassMetric(factory);
             System.out.println(m.execute());
+            Metric m1 = new AverageClassByPackageMetric(factory);
+            System.out.println(m1.execute());
         } catch (Exception e) {
             e.printStackTrace();
         }
