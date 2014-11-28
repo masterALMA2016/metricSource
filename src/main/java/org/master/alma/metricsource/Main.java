@@ -11,7 +11,9 @@ import java.io.File;
 import java.util.List;
 
 /**
- * Created by Maxime on 07/11/14.
+ * Created on 07/11/14.
+ *
+ * @author Maxime
  */
 public class Main {
 
@@ -29,8 +31,8 @@ public class Main {
             for(CtSimpleType s : factory.Class().getAll()) {
                 System.out.println("class: "+s.getQualifiedName());
                 List<CtField> a = s.getFields();
-                for(int i=0; i<a.size(); i++) {
-                    System.out.println("field: "+a.get(i).getSimpleName()+" "+a.get(i).getType().getQualifiedName());
+                for (CtField anA : a) {
+                    System.out.println("field: " + anA.getSimpleName() + " " + anA.getType().getQualifiedName());
                 }
 
             }

@@ -3,7 +3,9 @@ package org.master.alma.metricsource;
 import spoon.reflect.factory.Factory;
 
 /**
- * Created by Maxime on 14/11/14.
+ * Created on 14/11/14.
+ *
+ * @author Maxime
  */
 public abstract class Metric<T> {
 

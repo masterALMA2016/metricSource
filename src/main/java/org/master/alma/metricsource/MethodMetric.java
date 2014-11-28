@@ -10,7 +10,9 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * Created by Maxime on 14/11/14.
+ * Created on 14/11/14.
+ *
+ * @author Maxime
  */
 public class MethodMetric extends Metric<Double>{
 
