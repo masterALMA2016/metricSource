@@ -24,9 +24,9 @@ public class MethodMetricTest {
     }
 
     @Test
-    public void testBean() {
+    public void testExecute() throws Exception {
         double result = m.execute();
 
-        Assert.assertEquals("Number of Method by Class", 4.0, result, 0);
+        Assert.assertEquals("Number of Method by Class", 3.2, result, 0);
     }
 }
