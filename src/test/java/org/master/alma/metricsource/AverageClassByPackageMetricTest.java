@@ -11,6 +11,6 @@ public class AverageClassByPackageMetricTest extends AbstractTest{
     public void testExecute() throws Exception {
         m = new AverageClassByPackageMetric(factory);
         double result = m.execute();
-        Assert.assertEquals("Average of Class by package", 3.5, result, 0);
+        Assert.assertEquals("Average of Class by package", 4.0, result, 0);
     }
 }
