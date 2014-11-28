@@ -3,20 +3,14 @@ package org.master.alma.metricsource;
 import spoon.reflect.declaration.CtSimpleType;
 import spoon.reflect.factory.Factory;
 
-import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.DoubleSummaryStatistics;
-import java.util.List;
-import java.util.Locale;
-
 /**
  * Created on 14/11/14.
  *
  * @author Maxime
  */
-public class MethodMetric extends Metric<Double>{
+public class AverageMethodByClassMetric extends Metric<Double>{
 
-    public MethodMetric(Factory factory) {
+    public AverageMethodByClassMetric(Factory factory) {
         super(factory);
     }
 

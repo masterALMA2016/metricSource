@@ -36,7 +36,7 @@ public class Main {
                 }
 
             }
-            MethodMetric m = new MethodMetric(factory);
+            AverageMethodByClassMetric m = new AverageMethodByClassMetric(factory);
             System.out.println(m.execute());
         } catch (Exception e) {
             e.printStackTrace();

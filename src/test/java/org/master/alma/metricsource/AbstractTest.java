@@ -1,32 +1,24 @@
 package org.master.alma.metricsource;
 
-import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Test;
 import spoon.Launcher;
 import spoon.reflect.factory.Factory;
 import spoon.support.compiler.FileSystemFolder;
 
 import java.io.File;
 
-public class MethodMetricTest {
+/**
+ * Created by Maxime on 28/11/14.
+ */
+public abstract class AbstractTest {
 
-    private MethodMetric m;
+    protected Factory factory;
 
     @Before
     public void setUp() throws Exception {
         Launcher spoon = new Launcher();
         spoon.addInputResource(new FileSystemFolder(new File("./src/test/java/test")));
         spoon.run();
-        Factory factory = spoon.getFactory();
-
-        m = new MethodMetric(factory);
-    }
-
-    @Test
-    public void testExecute() throws Exception {
-        double result = m.execute();
-
-        Assert.assertEquals("Number of Method by Class", 3.2, result, 0);
+        factory = spoon.getFactory();
     }
 }
