@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by david on 28/11/14.
+ * Created on 28/11/14.
+ *
+ * @author david
  */
 public class DepthInheritenceTreeByMethodeMetricTest extends AbstractTest {
        private DepthInheritenceTreeByMethodeMetric dit;
@@ -26,8 +28,8 @@ public class DepthInheritenceTreeByMethodeMetricTest extends AbstractTest {
             expected.put("test.FakeImpl", 1);
             expected.put("test.FakeEnum", 1);
             expected.put("test.Fake",0);
-            expected.put("test.plop.Plop", 0);
-            expected.put("test.plop.PlopPlop", 0);
+            expected.put("test.plop.Plop", 2);
+            expected.put("test.plop.PlopPlop", 3);
 
 
             Assert.assertEquals("depth in tree ", expected, result);

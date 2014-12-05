@@ -5,7 +5,9 @@ import spoon.reflect.declaration.CtSimpleType;
 import spoon.reflect.factory.Factory;
 
 /**
- * Created by Maxime on 28/11/14.
+ * Created on 28/11/14.
+ *
+ * @author Maxime
  */
 public class AverageClassByPackageMetric extends Metric<Double> {
 

@@ -8,7 +8,9 @@ import spoon.support.compiler.FileSystemFolder;
 import java.io.File;
 
 /**
- * Created by Maxime on 28/11/14.
+ * Created on 28/11/14.
+ *
+ * @author Maxime
  */
 public abstract class AbstractTest {
 

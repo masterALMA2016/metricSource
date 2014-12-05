@@ -6,7 +6,9 @@ import spoon.reflect.factory.Factory;
 import java.util.HashMap;
 
 /**
- * Created by david on 28/11/14.
+ * Created on 28/11/14.
+ *
+ * @author david
  */
 public class DepthInheritenceTreeByMethodeMetric extends Metric< HashMap<String,Integer>> {
 
@@ -28,7 +30,7 @@ public class DepthInheritenceTreeByMethodeMetric extends Metric< HashMap<String,
             }
 
             depthRes.put(s.getQualifiedName(),profondeur);
-            System.out.println(s.getQualifiedName()+" de profondeur :"+profondeur);
+            // System.out.println(s.getQualifiedName()+" de profondeur :"+profondeur);
 
         }
         return depthRes;

@@ -7,7 +7,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by Maxime on 28/11/14.
+ * Created on 28/11/14.
+ *
+ * @author Maxime
  */
 public class ClassByPackageMetric extends Metric<Map<String, Integer>> {
 
