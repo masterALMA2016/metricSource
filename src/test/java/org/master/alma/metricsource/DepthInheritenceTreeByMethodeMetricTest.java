@@ -26,7 +26,7 @@ public class DepthInheritenceTreeByMethodeMetricTest extends AbstractTest {
             expected.put("test.FakeBean", 0);
             expected.put("test.FakeService", 0);
             expected.put("test.FakeImpl", 1);
-            expected.put("test.FakeEnum", 1);
+            expected.put("test.FakeEnum", 0);
             expected.put("test.Fake",0);
             expected.put("test.plop.Plop", 2);
             expected.put("test.plop.PlopPlop", 3);

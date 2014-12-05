@@ -23,7 +23,7 @@ public class DepthInheritenceTreeByMethodeMetric extends Metric< HashMap<String,
                 int profondeur=0;
                 parent= s.getActualClass().getSuperclass();
 
-            while( parent != null && parent != java.lang.Object.class){
+            while( parent != null && parent != java.lang.Object.class && parent !=java.lang.Enum.class){
 
                 profondeur +=1;
                 parent = parent.getSuperclass();
